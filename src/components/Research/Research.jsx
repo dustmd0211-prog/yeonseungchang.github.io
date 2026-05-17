@@ -1,56 +1,52 @@
 import styles from './Research.module.css'
 
-const articles = [
+const insights = [
   {
     id: 1,
-    topic: 'Marketing Strategy',
-    date: 'March 2024',
-    title: 'How AI is Reshaping Digital Marketing Attribution',
-    excerpt:
-      'An analysis of how machine learning models are improving multi-touch attribution in performance marketing, and what it means for CMOs.',
-    link: '#',
+    title: 'Why Decision Fatigue Matters More Than Productivity',
+    desc: 'Insights from building AI-assisted scheduling and shopping products — reducing choices often creates more value than adding features.',
   },
   {
     id: 2,
-    topic: 'Financial Analysis',
-    date: 'January 2024',
-    title: 'Interest Rate Sensitivity in Consumer Lending Markets',
-    excerpt:
-      'Examining how recent Fed rate decisions have rippled through consumer credit markets, with data from 2020–2023.',
-    link: '#',
+    title: 'Trust Is the Most Important UX in Allergy Shopping',
+    desc: 'Consumer trust and clarity strongly influence food purchasing behavior. Safety-first products need a different design language than convenience tools.',
   },
   {
     id: 3,
-    topic: 'Product Management',
-    date: 'November 2023',
-    title: 'Retention Over Acquisition: A Framework for Early-Stage SaaS',
-    excerpt:
-      'A framework for prioritizing user retention strategies over paid acquisition during a product\'s first 12 months.',
-    link: '#',
+    title: 'Small Communication Frictions Create Bigger Problems',
+    desc: 'Daily coordination failures between people are rarely technical — they are emotional. The best products reduce friction without removing warmth.',
+  },
+  {
+    id: 4,
+    title: 'Why B2B Often Feels More Sustainable Than B2C',
+    desc: 'Lessons from startup programs and market research: B2B products can grow through structured relationships rather than mass acquisition.',
+  },
+  {
+    id: 5,
+    title: 'Positioning Is a Strategic Choice, Not a Marketing Decision',
+    desc: 'How you define your product shapes everything — from features to pricing to the channels you use. Getting positioning wrong is expensive.',
   },
 ]
 
 export default function Research() {
   return (
-    <section id="research" className="section section-alt">
+    <section id="research" className="section">
       <div className="container">
-        <p className="section-label">Research & Insights</p>
-        <h2 className="section-title">What I'm thinking about</h2>
+        <p className="section-label">Insights</p>
+        <h2 className="section-title">What I think about</h2>
         <p className="section-subtitle">
-          Articles and analyses on business strategy, marketing, and product.
+          Short observations on consumer behavior, product strategy, and startup positioning.
         </p>
 
-        <div className={styles.grid}>
-          {articles.map(article => (
-            <a key={article.id} href={article.link} className={styles.card}>
-              <div className={styles.cardMeta}>
-                <span className={styles.topic}>{article.topic}</span>
-                <span className={styles.date}>{article.date}</span>
+        <div className={styles.list}>
+          {insights.map((item, i) => (
+            <div key={item.id} className={styles.item}>
+              <span className={styles.num}>0{i + 1}</span>
+              <div className={styles.content}>
+                <h3 className={styles.title}>{item.title}</h3>
+                <p className={styles.desc}>{item.desc}</p>
               </div>
-              <h3 className={styles.title}>{article.title}</h3>
-              <p className={styles.excerpt}>{article.excerpt}</p>
-              <span className={styles.readMore}>Read more →</span>
-            </a>
+            </div>
           ))}
         </div>
       </div>
