@@ -1,0 +1,144 @@
+.list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 140px 32px 1fr;
+  gap: 0 0;
+}
+
+/* Left: type + period */
+.left {
+  padding-top: 0.2rem;
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+.type {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.period {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Center: dot + line */
+.connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.12);
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+
+.line {
+  width: 1px;
+  flex: 1;
+  background: var(--border);
+  margin: 8px 0 0;
+  min-height: 2rem;
+}
+
+/* Right: content */
+.right {
+  padding-left: 1.75rem;
+  padding-bottom: 3.25rem;
+}
+
+.header {
+  margin-bottom: 0.6rem;
+}
+
+.org {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.role {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.summary {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 640px;
+  margin-bottom: 1rem;
+}
+
+.bullets {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bullet {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.72;
+  padding-left: 1.1rem;
+  position: relative;
+  max-width: 640px;
+}
+.bullet::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .item {
+    grid-template-columns: 28px 1fr;
+    grid-template-rows: auto;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .connector {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .right {
+    grid-column: 2;
+    grid-row: 1;
+    padding-left: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+
+  /* Show period inline on mobile */
+  .right::before {
+    content: attr(data-period);
+  }
+}

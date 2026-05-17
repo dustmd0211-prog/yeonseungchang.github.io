@@ -1,0 +1,404 @@
+/* ── Case study wrapper ───────────────────────────────────── */
+.caseStudy {
+  background: var(--white);
+}
+
+/* ── Back link ───────────────────────────────────────────── */
+.backLink {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color var(--transition);
+  letter-spacing: 0.01em;
+}
+.backLink:hover { color: var(--accent); }
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.heroWrap {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 5rem 0 4rem;
+}
+
+.heroLabel {
+  margin-bottom: 1rem;
+}
+
+.projectTitle {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+/* Meta bar */
+.metaBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  overflow: hidden;
+  width: fit-content;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0.9rem 1.5rem;
+  position: relative;
+}
+
+.metaSep {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: var(--border);
+}
+
+.metaLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.metaValue {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* ── Hero image placeholder ───────────────────────────────── */
+.heroImageWrap {
+  padding: 2.5rem 0 0;
+  background: var(--white);
+}
+
+/* ── Placeholder blocks ───────────────────────────────────── */
+.placeholder {
+  position: relative;
+  width: 100%;
+  background: var(--gray-50);
+  border: 1px dashed var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.placeholderLabel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ── Body layout ──────────────────────────────────────────── */
+.body {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Two-column row: [label] [content] */
+.row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0 4rem;
+  padding: 3rem 0;
+}
+
+.rowLabel {
+  padding-top: 0.15rem;
+}
+
+.rowLabelText {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  position: sticky;
+  top: calc(var(--nav-height) + 1.5rem);
+}
+
+.rowContent {
+  min-width: 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+.bodyText {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  max-width: 680px;
+  margin-bottom: 0;
+}
+.bodyText + .bodyText { margin-top: 1rem; }
+.bodyText strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Quote block ─────────────────────────────────────────── */
+.quote {
+  border-left: 2px solid var(--accent);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.75;
+  background: var(--bg-secondary);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  max-width: 680px;
+}
+
+/* ── Stat cards ──────────────────────────────────────────── */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.statCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem;
+  background: var(--white);
+}
+
+.statValue {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  line-height: 1;
+}
+
+.statDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ── List ────────────────────────────────────────────────── */
+.list {
+  padding-left: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 680px;
+  list-style: none;
+}
+
+.list li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ── Strategy grid ───────────────────────────────────────── */
+.strategyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.strategyCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  background: var(--white);
+  transition: box-shadow var(--transition);
+}
+.strategyCard:hover {
+  box-shadow: var(--shadow);
+}
+
+.strategyLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.strategyText {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* ── Role list ───────────────────────────────────────────── */
+.roleList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.roleItem {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.roleDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── Process steps ───────────────────────────────────────── */
+.processGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.processCard {
+  background: var(--white);
+  padding: 1.75rem;
+  transition: background var(--transition);
+}
+.processCard:hover {
+  background: var(--bg-secondary);
+}
+
+.processStep {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.processTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.processBody {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* ── Key Learning box ────────────────────────────────────── */
+.learningBox {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 2.5rem 0;
+  }
+
+  .rowLabelText {
+    position: static;
+  }
+
+  .metaBar {
+    flex-wrap: wrap;
+  }
+
+  .metaItem {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .strategyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroWrap {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .body {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .metaBar {
+    width: 100%;
+  }
+
+  .learningBox {
+    padding: 1.5rem;
+  }
+}
